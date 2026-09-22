@@ -4,6 +4,6 @@
   "private": true,
   "description": "A small browser-based to-do list application for Software Engineering Assignment 01.",
   "scripts": {
-    "test": "node --test tests/smoke.test.js"
+    "test": "node --test smoke.test.js"
   }
 }
