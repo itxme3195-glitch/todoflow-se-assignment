@@ -1,8 +1,8 @@
 # Software Engineering Assignment 01
 
 **Student name:** Muhammad Azaan Ahmed  
-**Roll number:** 081  
-**Class:** BCS (3A / 3B)  
+**Roll number:** FA25-BCS-081  
+**Class:** BCS 3B  
 **Application:** TodoFlow — To-Do List Application  
 **Submission date:** 23 September 2026
 
@@ -89,7 +89,7 @@ Continuous Integration checks a project automatically whenever code changes are 
 ## Final submission checklist
 
 - [x] Enter the student name.
-- [x] Enter the roll number.
+- [x] Enter the roll number: FA25-BCS-081.
 - [x] Add the GitHub repository link.
 - [x] Add the live deployed application link.
 - [x] Upload the complete source code to the repository.
