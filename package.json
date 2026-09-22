@@ -1,0 +1,9 @@
+{
+  "name": "todoflow-se-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small browser-based to-do list application for Software Engineering Assignment 01.",
+  "scripts": {
+    "test": "node --test tests/smoke.test.js"
+  }
+}

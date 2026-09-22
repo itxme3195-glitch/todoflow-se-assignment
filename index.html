@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TodoFlow is a focused to-do list for planning, prioritising, and finishing everyday work." />
+  <title>TodoFlow — Make space for what matters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero-panel" aria-labelledby="page-title">
+      <div class="brand-mark" aria-hidden="true">TF</div>
+      <p class="eyebrow">PERSONAL PLANNING / 01</p>
+      <h1 id="page-title">Make space for<br /><span>what matters.</span></h1>
+      <p class="hero-copy">A calm, clear place to capture your next move and keep momentum.</p>
+      <div class="today-card">
+        <div>
+          <span class="today-label">TODAY</span>
+          <strong id="date-label">Loading date…</strong>
+        </div>
+        <span class="spark" aria-hidden="true">✦</span>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="Todo workspace">
+      <header class="workspace-header">
+        <div>
+          <p class="eyebrow accent">YOUR LIST</p>
+          <h2>Small steps,<br /><span>real progress.</span></h2>
+        </div>
+        <div class="progress-ring" id="progress-ring" aria-label="0 percent complete"><span id="progress-value">0%</span></div>
+      </header>
+
+      <form class="add-form" id="todo-form">
+        <label class="sr-only" for="todo-input">Add a task</label>
+        <input id="todo-input" name="todo" type="text" maxlength="100" placeholder="What needs your attention?" autocomplete="off" required />
+        <button type="submit" class="add-button" aria-label="Add task">+</button>
+      </form>
+
+      <div class="toolbar" role="toolbar" aria-label="Filter tasks">
+        <div class="filters" role="group" aria-label="Task filters">
+          <button class="filter-button active" type="button" data-filter="all">All <span id="all-count">0</span></button>
+          <button class="filter-button" type="button" data-filter="active">Open <span id="active-count">0</span></button>
+          <button class="filter-button" type="button" data-filter="completed">Done <span id="completed-count">0</span></button>
+        </div>
+        <button type="button" class="text-button" id="clear-completed">Clear done</button>
+      </div>
+
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">◌</div>
+        <p>Your list is clear.</p>
+        <span>Add one small task to get started.</span>
+      </div>
+      <ul class="todo-list" id="todo-list" aria-live="polite"></ul>
+      <p class="keyboard-note"><kbd>Enter</kbd> to add <span>•</span> Your tasks stay in this browser</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
