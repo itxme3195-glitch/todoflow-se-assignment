@@ -2,20 +2,20 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
-const { createTask, escapeHtml } = require("../app.js");
+const { createTask, escapeHtml } = require("./app.js");
 
-const root = path.join(__dirname, "..");
+const root = __dirname;
 
 test("required project files exist", () => {
   for (const file of ["index.html", "styles.css", "app.js", "package.json"]) {
-    assert.equal(fs.existsSync(path.join(root, file)), true, `${file} should exist`);
+    assert.equal(fs.existsSync(path.join(root, file)), true);
   }
 });
 
 test("page exposes the main interactive controls", () => {
   const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
-  for (const selector of ["todo-form", "todo-input", "todo-list", "clear-completed"]) {
-    assert.match(html, new RegExp(`id=\\"${selector}\\"`));
+  for (const id of ["todo-form", "todo-input", "todo-list", "clear-completed"]) {
+    assert.equal(html.includes('id="' + id + '"'), true);
   }
 });
 
